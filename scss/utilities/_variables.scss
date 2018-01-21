@@ -2,26 +2,37 @@
 // At minimum, create variables for fonts, breakpoints, and colors.
 
 //Fonts
-$font-style--main : "Helvetica Neue", sans-serif;
+$font-style--main     : "Helvetica Neue", sans-serif;
+$font-stack-primary   : 'Raleway', sans-serif;
+$font-stack-secondary : 'Bree Serif', serif;
 
 //Breakpoints
 $brkpoint-sm : 480px;
 $brkpoint-lg : 1100px;
 
 //Colors
-$color-primary : #15d6d6;
-$color-successButton       : #47d147;
-$color-errorButton         : #e62e00;
-$color-warningButton : #ff3300;
-$color-infoButon : #6600cc;
+$color-primary        : #15d6d6;
+$color-secondary      : #15d6d6;
+$color-accent         : #15d6d6;
 
-$color-grid-col-12 : #33ffd6;
-$color-grid-col-6 : #1a75ff;
-$color-grid-col-4 : #00e6e6;
-$color-grid-col-3 : #ff66ff;
-$color-grid-col-5 : #00cc00;
-$color-grid-col-8 : #cc3300;
+$white                : white;
+$black                : black;
+$grey                 : grey;
+$blue                 : blue;
+$green                : green;
+$red                  : red;
 
+$color-btn-default    : #51ddfc;
+$color-btn-success    : #63cc82;
+$color-btn-error      : #f2bcbe;
+$color-btn-warning    : #fd7856;
+$color-btn-info       : #927bc1;
 
-
+$color-grid-col-3     : #ff66ff;
+$color-grid-col-4     : #7ee6fd;
+$color-grid-col-5     : #88d9a0;
+$color-grid-col-6     : #3fabca;
+$color-grid-col-7     : #ec9fa3;
+$color-grid-col-8     : #fd9f85;
+$color-grid-col-12    : #80e8d1;
 

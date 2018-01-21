@@ -1,0 +1,58 @@
+// Grid:
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    background: #ffffff;
+}
+
+.grid__row {
+    margin-top: 3em;
+    clear: both;
+}
+
+.grid__col {
+    display: inline-block;
+    &--3 {
+        @extend .grid__col;
+        width: 24%;
+        background-color: #deb2ee;
+    }
+    &--4 {
+        @extend .grid__col;
+        width: 32.33%;
+        background-color: #7ee6fd;
+    }
+    &--5 {
+        @extend .grid__col;
+        width: 40.67%;
+        background-color: #88d9a0;
+    }
+    &--6 {
+        @extend .grid__col;
+        width: 49%;
+        background-color: #3fabca;
+    }
+    &--7 {
+        @extend .grid__col;
+        width: 57.33%;
+        background-color: #ec9fa3;
+    }
+    &--8 {
+        @extend .grid__col;
+        width: 65.67%;
+        background-color: #fd9f85;
+    }
+    &--12 {
+        @extend .grid__col;
+        width: 100%;
+        background-color: #80e8d1;
+    }
+}
+
+.centered {}
+
+.theme__colors {
+    color: #888280;
+    text-align: center;
+}
