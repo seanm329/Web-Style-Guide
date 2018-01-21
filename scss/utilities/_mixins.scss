@@ -1,0 +1,23 @@
+// Inside your mixins partial, you’ll want to create mixins for:
+
+// Media Queries
+// Flexbox settings
+// Element and Modifier BEM Selectors
+
+// Media Queries
+
+@mixin mq($break) {
+  @if $break == "small" {
+    @media(min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
+      @content;
+    }
+  }
+  @else if $break == "large" {
+    @media(min-width: $brkpoint-lg) {
+      @content;
+    }
+  }
+  @else {
+    @error "No value could be found for '#{$break}'."
+  }
+}
