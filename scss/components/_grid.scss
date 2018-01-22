@@ -13,39 +13,42 @@
 
 .grid__col {
     display: inline-block;
+    margin: auto adjust-gutter(-1);
+    color: #888280;
+    text-align: center;
     &--3 {
         @extend .grid__col;
-        width: 24%;
+        width: per-col(3, 4);
         background-color: #deb2ee;
     }
     &--4 {
         @extend .grid__col;
-        width: 32.33%;
+        width: per-col(4, 3);
         background-color: #7ee6fd;
     }
     &--5 {
         @extend .grid__col;
-        width: 40.67%;
+        width: per-col(5, 2);
         background-color: #88d9a0;
     }
     &--6 {
         @extend .grid__col;
-        width: 49%;
+        width: per-col(6, 2);
         background-color: #3fabca;
     }
     &--7 {
         @extend .grid__col;
-        width: 57.33%;
+        width: per-col(7, 2);
         background-color: #ec9fa3;
     }
     &--8 {
         @extend .grid__col;
-        width: 65.67%;
+        width: per-col(8, 2);
         background-color: #fd9f85;
     }
     &--12 {
         @extend .grid__col;
-        width: 100%;
+        width: per-col(12, 1);
         background-color: #80e8d1;
     }
 }
@@ -53,6 +56,4 @@
 .centered {}
 
 .theme__colors {
-    color: #888280;
-    text-align: center;
 }

@@ -8,9 +8,13 @@
   padding: 0.75em 3em;
   border-radius: 0.35em;
   margin: 1em 1.5em;
+  color: $white;
   &--info {
     @extend .btn;
     background-color: $color-btn-info;
+    & .theme__colors {
+      color: $white;
+    }
   }
   &--warning {
     @extend .btn;
@@ -29,6 +33,6 @@
     background-color: $color-btn-default;
   }
 }
+
 .theme__colors {
-  color: $white;
 }

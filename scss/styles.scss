@@ -4,7 +4,19 @@
 // @import 'base/index';
 // @import 'components/index';
 
+// =======================================
+//    Partial Imports
+// =======================================
+
+//  Utillities
 @import 'utilities/variables',
-        'base/styles',
-        'components/buttons',
+        'utilities/functions',
+        'utilities/mixins',
+        'utilities/placeholders';
+
+//  Base Styles
+@import 'base/base';
+
+// Component Styles
+@import 'components/buttons',
         'components/grid';

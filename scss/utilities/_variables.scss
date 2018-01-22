@@ -7,27 +7,33 @@ $font-stack-primary   : 'Raleway', sans-serif;
 $font-stack-secondary : 'Bree Serif', serif;
 
 //Breakpoints
-$brkpoint-sm : 480px;
-$brkpoint-lg : 1100px;
+$break-xs: 575px;
+$break-s : 576px;
+$break-m : 768px;
+$break-lg : 992px;
 
-//Colors
+// Colors
+$black: #000;
+$white: #fff;
+$red: #e2061c;
+$gray-light: #c9c8c8;
+$gray: #838282;
+$gray-dark: #333333;
+$blue: #253652;
+ 
+// Colors Site
 $color-primary        : #15d6d6;
 $color-secondary      : #15d6d6;
 $color-accent         : #15d6d6;
 
-$white                : white;
-$black                : black;
-$grey                 : grey;
-$blue                 : blue;
-$green                : green;
-$red                  : red;
-
+// Colors button
 $color-btn-default    : #51ddfc;
 $color-btn-success    : #63cc82;
 $color-btn-error      : #f2bcbe;
 $color-btn-warning    : #fd7856;
 $color-btn-info       : #927bc1;
 
+// Colors Grid
 $color-grid-col-3     : #ff66ff;
 $color-grid-col-4     : #7ee6fd;
 $color-grid-col-5     : #88d9a0;
@@ -36,3 +42,6 @@ $color-grid-col-7     : #ec9fa3;
 $color-grid-col-8     : #fd9f85;
 $color-grid-col-12    : #80e8d1;
 
+// Grid
+$max-width: 1400px;
+$gutter: 9px;
