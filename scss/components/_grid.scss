@@ -3,12 +3,13 @@
     width: 100%;
     max-width: 1400px;
     margin: auto;
-    background: #ffffff;
+    background:white;
 }
 
 .grid__row {
     margin-top: 3em;
     clear: both;
+    color: white;
 }
 
 .grid__col {
@@ -44,12 +45,12 @@
     &--8 {
         @extend .grid__col;
         width: per-col(8, 2);
-        background-color: #fd9f85;
+        // background-color: #fd9f85;
     }
     &--12 {
         @extend .grid__col;
         width: per-col(12, 1);
-        background-color: #80e8d1;
+        // background-color: #80e8d1;
     }
 }
 

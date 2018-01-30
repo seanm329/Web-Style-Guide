@@ -1,4 +1,15 @@
 // Navigation:
-// .nav__item {
-  
-// }
+ .nav__item {
+   display: flex;
+   font-size: 1.125em;
+   text-align: center;
+   font-weight: 600;
+   margin-top: 1.5em;
+   
+ }
+
+ .nav__item a:hover {
+   background-color: $color-primary;
+   color: white;
+   
+ }
