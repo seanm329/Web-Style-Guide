@@ -2,9 +2,20 @@
 // .form {
   
 // }
-// .form__label--hidden {
+.form__label--hidden {
+  display: none;
   
-// }
-// .form__input {
+ }
+.form__input {
+  width: 100%;
+  font-size: 0.8em;
+  padding-left: 0.8em;
+  height: em(40px);
+  margin: 1em 0 1em 0;
+  border: 0px;
+  border-bottom: 5px solid $color-primary;
+
+  &:focus {
+    border-color: $color-secondary;
   
-// }
+ }

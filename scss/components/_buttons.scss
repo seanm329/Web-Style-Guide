@@ -1,38 +1,61 @@
 // Buttons:
+// .btn {
+//   display: inline-block;
+//   font-weight: bold;
+//   font-size: 1em;
+//   text-decoration: none;
+//   text-transform: uppercase;
+//   padding: 0.75em 3em;
+//   border-radius: 0.35em;
+//   margin: 1em 1.5em;
+//   color: $white;
+//   &--info {
+//     @extend .btn;
+//     background-color: $color-btn-info;
+//     & .theme__colors {
+//       color: $white;
+//     }
+//   }
+//   &--warning {
+//     @extend .btn;
+//     background-color: $color-btn-warning;
+//   }
+//   &--error {
+//     @extend .btn;
+//     background-color: $color-btn-error;
+//   }
+//   &--success {
+//     @extend .btn;
+//     background-color: $color-btn-success;
+//   }
+//   &--default {
+//     @extend .btn;
+//     background-color: $color-btn-default;
+//   }
+// }
 .btn {
-  display: inline-block;
-  font-weight: bold;
-  font-size: 1em;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 0.75em 3em;
-  border-radius: 0.35em;
-  margin: 1em 1.5em;
-  color: $white;
-  &--info {
-    @extend .btn;
-    background-color: $color-btn-info;
-    & .theme__colors {
-      color: $white;
+  @include m(default) {
+    @extend %btn;
+    background-color: $color-secondary;
     }
+  @include m(success) {
+    @extend %btn;
+    background-color: $color-success;
   }
-  &--warning {
-    @extend .btn;
-    background-color: $color-btn-warning;
+  @include m(error) {
+    @extend %btn;
+    background-color: $color-error;
   }
-  &--error {
-    @extend .btn;
-    background-color: $color-btn-error;
+  @include m(warning) {
+    @extend %btn;
+    background-color: $color-warning;
   }
-  &--success {
-    @extend .btn;
-    background-color: $color-btn-success;
-  }
-  &--default {
-    @extend .btn;
-    background-color: $color-btn-default;
+  @include m(info) {
+    @extend %btn;
+    background-color: $color-info;
   }
 }
 
 .theme__colors {
+  width: 100%;
 }

@@ -1,60 +1,82 @@
 // Grid:
 .container {
-    width: 100%;
-    max-width: 1400px;
-    margin: auto;
-    background:white;
-}
-
-.grid__row {
-    margin-top: 3em;
-    clear: both;
-    color: white;
+  @extend %centered;
+  width: 80%;
+  @include mq(med) {
+    max-width: $g-cont-max-w;
+  }
 }
 
 .grid__col {
-    display: inline-block;
-    margin: auto adjust-gutter(-1);
-    color: #888280;
-    text-align: center;
-    &--3 {
-        @extend .grid__col;
-        width: per-col(3, 4);
-        background-color: #deb2ee;
-    }
-    &--4 {
-        @extend .grid__col;
-        width: per-col(4, 3);
-        background-color: #7ee6fd;
-    }
-    &--5 {
-        @extend .grid__col;
-        width: per-col(5, 2);
-        background-color: #88d9a0;
-    }
-    &--6 {
-        @extend .grid__col;
-        width: per-col(6, 2);
-        background-color: #3fabca;
-    }
-    &--7 {
-        @extend .grid__col;
-        width: per-col(7, 2);
-        background-color: #ec9fa3;
-    }
-    &--8 {
-        @extend .grid__col;
-        width: per-col(8, 2);
-        // background-color: #fd9f85;
-    }
-    &--12 {
-        @extend .grid__col;
-        width: per-col(12, 1);
-        // background-color: #80e8d1;
-    }
+  @include mq(med){
+    @include g-columns;
+  }
 }
 
-.centered {}
-
-.theme__colors {
+.grid__row {
+  @extend %clearfix;
+  margin-top: 2em;
+	margin-bottom: 2em;
+  @include flex(block, null, null, null)
 }
+
+.grid__col--3 {
+  @include flex(flex, null, null, center)
+}
+
+[class^="grid__col--"] {
+  @media (sm) {
+    margin-top: em(12px);
+    margin-bottom: em(12px);
+  }
+  @media (med) {
+    @include doubly(percentage($g-gutter-width / $context));
+    float: left;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    &:last-of-type {
+      float: right;
+    }
+  }
+}
+
+$grid-colors: (
+	grid__col--12 : saturate($color-col12 , 10%),
+	grid__col--8  : darken($color-col8 , 10%),
+	grid__col--7  : saturate($color-col7 , 20%),
+	grid__col--6  : darken($color-col6 , 10%),
+	grid__col--4  : darken($color-col4 , 5%),
+	grid__col--5  : saturate($color-col5 , 30%),
+	grid__col--3  : saturate($color-col3 , 10%)
+);
+
+@each $value, $color in $grid-colors {
+	.#{$value}.theme__colors {
+		color: $white;
+		@extend %centered;
+		background-color: $color;
+    border-radius: $br;
+    padding: em(15px) em(30px);
+    border: 0;
+    margin-bottom: em(20px);
+	}
+}
+
+@include mq(med) {
+  .grid__row {
+    @include flex(flex, null, null, space-between)
+  }
+  .grid__col--3 {
+    margin-right: auto;
+    align-self: center;
+  }
+  .grid__col--9 {
+    margin-top: 1em;
+    width: 100%;
+  }
+  .grid__col--12 {
+    @include flex(flex, null, null, space-between)
+  }
+}
+
