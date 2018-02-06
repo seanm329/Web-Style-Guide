@@ -1,20 +1,27 @@
 // =========================================
 //  Functions
 // =========================================
+//Import if google fonts url is defined
 
-// px-to-pct Return percent based on parameter $target pixels
-// optional $context pixels default is $max-width
-@function px-to-pct($target, $context: $max-width) {
-  @return ($target / $context) * 100%;
+@if variable-exists(font-url--google) {
+  @import url($font-url--google)
 }
 
-@function per-col($col, $items) {
-  $g-pct: px-to-pct($gutter + 1) * 2; 
-  $g-total: $items * $g-pct;
+//calculate em values
 
-  @return (100 - $g-total) * ($col / 12);
+@function em($target, $context: $base__font-size) {
+	@return ($target / $context) * 1em;
 }
 
-@function adjust-gutter($adjust) {
-  @return ($gutter + $adjust);
+// Call the color palette modifiers
+
+@function palette($palette, $shade: 'base') {
+  @return map-get(map-get($palettes, $palette), $shade);
+}
+
+
+// grid columns
+@function g-context($g-col-width, $g-col-count, $g-gutter-width) {
+  $g-context: ($g-col-width * $g-col-count) + ($g-gutter-width * ($g-col-count - 1));
+  @return $g-context;
 }

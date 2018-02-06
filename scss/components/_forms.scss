@@ -1,7 +1,9 @@
 // Forms:
-// .form {
-  
-// }
+.form {
+  @media (min-width: 768px) {
+    width: 400px;
+    margin-left: 50px;
+}
 .form__label--hidden {
   display: none;
   
@@ -17,5 +19,6 @@
 
   &:focus {
     border-color: $color-secondary;
-  
- }
+  }
+}
+}
